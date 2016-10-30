@@ -1,0 +1,306 @@
+pi@raspberrypi:~/performance/fibonacci_test $ perf stat ./a.out 1 1000000
+arg1 = 1, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 1 1000000':
+
+         33.288000      task-clock (msec)         #    0.835 CPUs utilized          
+                 9      context-switches          #    0.270 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                44      page-faults               #    0.001 M/sec                  
+        22,988,365      cycles                    #    0.691 GHz                      (19.33%)
+         3,118,404      stalled-cycles-frontend   #   13.57% frontend cycles idle   
+           158,609      stalled-cycles-backend    #    0.69% backend  cycles idle   
+        16,002,935      instructions              #    0.70  insns per cycle        
+                                                  #    0.19  stalled cycles per insn  (65.85%)
+         5,879,706      branches                  #  176.631 M/sec                    (39.37%)
+            22,036      branch-misses             #    0.37% of all branches          (10.02%)
+
+       0.039870582 seconds time elapsed
+
+pi@raspberrypi:~/performance/fibonacci_test $ perf stat ./a.out 2 1000000
+arg1 = 2, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 2 1000000':
+
+         92.929000      task-clock (msec)         #    0.932 CPUs utilized          
+                 9      context-switches          #    0.097 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                44      page-faults               #    0.473 K/sec                  
+        44,577,356      cycles                    #    0.480 GHz                      (55.41%)
+         8,382,502      stalled-cycles-frontend   #   18.80% frontend cycles idle     (59.54%)
+           250,656      stalled-cycles-backend    #    0.56% backend  cycles idle     (64.32%)
+        40,618,272      instructions              #    0.91  insns per cycle        
+                                                  #    0.21  stalled cycles per insn  (41.82%)
+        10,555,606      branches                  #  113.588 M/sec                    (31.11%)
+         1,269,365      branch-misses             #   12.03% of all branches          (36.93%)
+
+       0.099761954 seconds time elapsed
+
+pi@raspberrypi:~/performance/fibonacci_test $ perf stat ./a.out 3 1000000
+arg1 = 3, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 3 1000000':
+
+        187.024000      task-clock (msec)         #    0.959 CPUs utilized          
+                15      context-switches          #    0.080 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                43      page-faults               #    0.230 K/sec                  
+       129,381,751      cycles                    #    0.692 GHz                      (48.15%)
+        12,814,193      stalled-cycles-frontend   #    9.90% frontend cycles idle     (52.25%)
+           330,474      stalled-cycles-backend    #    0.26% backend  cycles idle     (52.16%)
+        74,093,783      instructions              #    0.57  insns per cycle        
+                                                  #    0.17  stalled cycles per insn  (38.28%)
+        16,679,333      branches                  #   89.183 M/sec                    (36.02%)
+         2,936,861      branch-misses             #   17.61% of all branches          (33.88%)
+
+       0.195069955 seconds time elapsed
+
+pi@raspberrypi:~/performance/fibonacci_test $ perf stat ./a.out 4 1000000
+arg1 = 4, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 4 1000000':
+
+        330.880000      task-clock (msec)         #    0.977 CPUs utilized          
+                14      context-switches          #    0.042 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                44      page-faults               #    0.133 K/sec                  
+       212,587,169      cycles                    #    0.642 GHz                      (51.05%)
+        16,152,485      stalled-cycles-frontend   #    7.60% frontend cycles idle     (52.51%)
+           303,163      stalled-cycles-backend    #    0.14% backend  cycles idle     (54.01%)
+       160,163,841      instructions              #    0.75  insns per cycle        
+                                                  #    0.10  stalled cycles per insn  (34.95%)
+        32,621,646      branches                  #   98.591 M/sec                    (31.99%)
+         5,475,195      branch-misses             #   16.78% of all branches          (33.71%)
+
+       0.338746449 seconds time elapsed
+
+pi@raspberrypi:~/performance/fibonacci_test $ perf stat ./a.out 5 1000000
+arg1 = 5, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 5 1000000':
+
+        591.680000      task-clock (msec)         #    0.985 CPUs utilized          
+                30      context-switches          #    0.051 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                43      page-faults               #    0.073 K/sec                  
+       412,718,878      cycles                    #    0.698 GHz                      (50.09%)
+        24,619,889      stalled-cycles-frontend   #    5.97% frontend cycles idle     (49.63%)
+           351,664      stalled-cycles-backend    #    0.09% backend  cycles idle     (49.62%)
+       280,505,247      instructions              #    0.68  insns per cycle        
+                                                  #    0.09  stalled cycles per insn  (34.99%)
+        52,491,687      branches                  #   88.716 M/sec                    (34.40%)
+        10,095,234      branch-misses             #   19.23% of all branches          (33.86%)
+
+       0.600856701 seconds time elapsed
+
+pi@raspberrypi:~/performance/fibonacci_test $ perf stat ./a.out 6 1000000
+arg1 = 6, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 6 1000000':
+
+       1006.092000      task-clock (msec)         #    0.989 CPUs utilized          
+                41      context-switches          #    0.041 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                43      page-faults               #    0.043 K/sec                  
+       701,901,589      cycles                    #    0.698 GHz                      (48.89%)
+        42,243,332      stalled-cycles-frontend   #    6.02% frontend cycles idle     (48.62%)
+           352,052      stalled-cycles-backend    #    0.05% backend  cycles idle     (50.49%)
+       481,514,402      instructions              #    0.69  insns per cycle        
+                                                  #    0.09  stalled cycles per insn  (35.00%)
+        89,636,361      branches                  #   89.094 M/sec                    (34.62%)
+        22,186,641      branch-misses             #   24.75% of all branches          (32.89%)
+
+       1.017639332 seconds time elapsed
+
+pi@raspberrypi:~/performance/fibonacci_test $ perf stat ./a.out 7 1000000
+arg1 = 7, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 7 1000000':
+
+       1729.514000      task-clock (msec)         #    0.990 CPUs utilized          
+                70      context-switches          #    0.040 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                42      page-faults               #    0.024 K/sec                  
+     1,194,326,633      cycles                    #    0.691 GHz                      (50.71%)
+        63,782,226      stalled-cycles-frontend   #    5.34% frontend cycles idle     (50.42%)
+           411,640      stalled-cycles-backend    #    0.03% backend  cycles idle     (50.58%)
+       833,098,617      instructions              #    0.70  insns per cycle        
+                                                  #    0.08  stalled cycles per insn  (33.13%)
+       141,113,104      branches                  #   81.591 M/sec                    (34.04%)
+        39,677,562      branch-misses             #   28.12% of all branches          (33.32%)
+
+       1.747233684 seconds time elapsed
+
+pi@raspberrypi:~/performance/fibonacci_test $ perf stat ./a.out 8 1000000
+arg1 = 8, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 8 1000000':
+
+       2746.298000      task-clock (msec)         #    0.991 CPUs utilized          
+               127      context-switches          #    0.046 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                44      page-faults               #    0.016 K/sec                  
+     1,915,914,119      cycles                    #    0.698 GHz                      (49.79%)
+       104,832,896      stalled-cycles-frontend   #    5.47% frontend cycles idle     (49.81%)
+           453,919      stalled-cycles-backend    #    0.02% backend  cycles idle     (50.39%)
+     1,336,649,272      instructions              #    0.70  insns per cycle        
+                                                  #    0.08  stalled cycles per insn  (33.37%)
+       234,687,871      branches                  #   85.456 M/sec                    (33.66%)
+        66,288,869      branch-misses             #   28.25% of all branches          (33.30%)
+
+       2.770700955 seconds time elapsed
+
+pi@raspberrypi:~/performance/fibonacci_test $ perf stat ./a.out 9 1000000
+arg1 = 9, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 9 1000000':
+
+       4526.030000      task-clock (msec)         #    0.993 CPUs utilized          
+               202      context-switches          #    0.045 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                42      page-faults               #    0.009 K/sec                  
+     3,156,737,055      cycles                    #    0.697 GHz                      (49.98%)
+       165,426,904      stalled-cycles-frontend   #    5.24% frontend cycles idle     (49.89%)
+           539,759      stalled-cycles-backend    #    0.02% backend  cycles idle     (50.10%)
+     2,228,433,975      instructions              #    0.71  insns per cycle        
+                                                  #    0.07  stalled cycles per insn  (33.51%)
+       373,268,017      branches                  #   82.471 M/sec                    (33.45%)
+       106,261,238      branch-misses             #   28.47% of all branches          (33.46%)
+
+       4.559703200 seconds time elapsed
+
+pi@raspberrypi:~/performance/fibonacci_test $ perf stat ./a.out 10 1000000
+arg1 = 10, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 10 1000000':
+
+       7056.039000      task-clock (msec)         #    0.993 CPUs utilized          
+               320      context-switches          #    0.045 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                42      page-faults               #    0.006 K/sec                  
+     4,919,004,851      cycles                    #    0.697 GHz                      (50.10%)
+       259,928,441      stalled-cycles-frontend   #    5.28% frontend cycles idle     (50.11%)
+           651,914      stalled-cycles-backend    #    0.01% backend  cycles idle     (50.11%)
+     3,504,724,581      instructions              #    0.71  insns per cycle        
+                                                  #    0.07  stalled cycles per insn  (33.42%)
+       598,827,121      branches                  #   84.867 M/sec                    (33.39%)
+       169,239,159      branch-misses             #   28.26% of all branches          (33.32%)
+
+       7.103953529 seconds time elapsed
+
+pi@raspberrypi:~/performance/fibonacci_test $ perf stat ./a.out 11 1000000
+arg1 = 11, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 11 1000000':
+
+      11456.036000      task-clock (msec)         #    0.969 CPUs utilized          
+               548      context-switches          #    0.048 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                44      page-faults               #    0.004 K/sec                  
+     7,971,851,653      cycles                    #    0.696 GHz                      (50.15%)
+       417,131,227      stalled-cycles-frontend   #    5.23% frontend cycles idle     (50.16%)
+           884,765      stalled-cycles-backend    #    0.01% backend  cycles idle     (50.09%)
+     5,744,220,532      instructions              #    0.72  insns per cycle        
+                                                  #    0.07  stalled cycles per insn  (33.27%)
+       955,580,950      branches                  #   83.413 M/sec                    (33.29%)
+       266,803,814      branch-misses             #   27.92% of all branches          (33.39%)
+
+      11.825326034 seconds time elapsed
+
+pi@raspberrypi:~/performance/fibonacci_test $ perf stat ./a.out 12 1000000
+arg1 = 12, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 12 1000000':
+
+      17780.169000      task-clock (msec)         #    0.994 CPUs utilized          
+               775      context-switches          #    0.044 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                44      page-faults               #    0.002 K/sec                  
+    12,403,670,957      cycles                    #    0.698 GHz                      (49.77%)
+       657,890,360      stalled-cycles-frontend   #    5.30% frontend cycles idle     (49.96%)
+         1,278,527      stalled-cycles-backend    #    0.01% backend  cycles idle     (50.07%)
+     8,943,313,816      instructions              #    0.72  insns per cycle        
+                                                  #    0.07  stalled cycles per insn  (33.48%)
+     1,534,004,468      branches                  #   86.276 M/sec                    (33.36%)
+       430,227,213      branch-misses             #   28.05% of all branches          (33.23%)
+
+      17.894449411 seconds time elapsed
+
+pi@raspberrypi:~/performance/fibonacci_test $ perf stat ./a.out 13 1000000
+arg1 = 13, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 13 1000000':
+
+      28620.778000      task-clock (msec)         #    0.994 CPUs utilized          
+             1,152      context-switches          #    0.040 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                43      page-faults               #    0.002 K/sec                  
+    19,959,166,653      cycles                    #    0.697 GHz                      (50.02%)
+     1,062,407,247      stalled-cycles-frontend   #    5.32% frontend cycles idle     (50.04%)
+         1,756,513      stalled-cycles-backend    #    0.01% backend  cycles idle     (50.05%)
+    14,440,055,457      instructions              #    0.72  insns per cycle        
+                                                  #    0.07  stalled cycles per insn  (33.29%)
+     2,451,321,189      branches                  #   85.648 M/sec                    (33.39%)
+       685,016,442      branch-misses             #   27.94% of all branches          (33.29%)
+
+      28.801306073 seconds time elapsed
+
+pi@raspberrypi:~/performance/fibonacci_test $ perf stat ./a.out 14 1000000
+arg1 = 14, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 14 1000000':
+
+      44626.944000      task-clock (msec)         #    0.994 CPUs utilized          
+             1,982      context-switches          #    0.044 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                44      page-faults               #    0.001 K/sec                  
+    31,124,455,693      cycles                    #    0.697 GHz                      (50.02%)
+     1,715,486,518      stalled-cycles-frontend   #    5.51% frontend cycles idle     (50.02%)
+         2,700,258      stalled-cycles-backend    #    0.01% backend  cycles idle     (49.98%)
+    22,528,657,359      instructions              #    0.72  insns per cycle        
+                                                  #    0.08  stalled cycles per insn  (33.32%)
+     3,950,214,902      branches                  #   88.516 M/sec                    (33.36%)
+     1,098,310,314      branch-misses             #   27.80% of all branches          (33.36%)
+
+      44.906785238 seconds time elapsed
+
+pi@raspberrypi:~/performance/fibonacci_test $ perf stat ./a.out 15 1000000
+arg1 = 15, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 15 1000000':
+
+      71740.256000      task-clock (msec)         #    0.990 CPUs utilized          
+             3,200      context-switches          #    0.045 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                43      page-faults               #    0.001 K/sec                  
+    50,037,836,596      cycles                    #    0.697 GHz                      (50.00%)
+     2,820,595,165      stalled-cycles-frontend   #    5.64% frontend cycles idle     (50.01%)
+         4,212,977      stalled-cycles-backend    #    0.01% backend  cycles idle     (50.04%)
+    36,214,766,206      instructions              #    0.72  insns per cycle        
+                                                  #    0.08  stalled cycles per insn  (33.32%)
+     6,359,725,247      branches                  #   88.649 M/sec                    (33.30%)
+     1,769,465,782      branch-misses             #   27.82% of all branches          (33.35%)
+
+      72.478219204 seconds time elapsed
+
+pi@raspberrypi:~/performance/fibonacci_test $ perf stat ./a.out 16 1000000
+arg1 = 16, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 16 1000000':
+
+     113339.426000      task-clock (msec)         #    0.994 CPUs utilized          
+             4,909      context-switches          #    0.043 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                43      page-faults               #    0.000 K/sec                  
+    79,068,950,980      cycles                    #    0.698 GHz                      (49.99%)
+     4,581,020,048      stalled-cycles-frontend   #    5.79% frontend cycles idle     (49.98%)
+         5,942,255      stalled-cycles-backend    #    0.01% backend  cycles idle     (49.99%)
+    57,009,304,410      instructions              #    0.72  insns per cycle        
+                                                  #    0.08  stalled cycles per insn  (33.39%)
+    10,282,334,326      branches                  #   90.722 M/sec                    (33.34%)
+     2,854,042,613      branch-misses             #   27.76% of all branches          (33.31%)
+
+     114.054747353 seconds time elapsed
+
+pi@raspberrypi:~/performance/fibonacci_test $ 
+:

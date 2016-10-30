@@ -1,0 +1,441 @@
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 1 1000000
+0,
+Performance counter stats for './a.out 1 1000000':
+
+20.165417      task-clock (msec)         #    0.901 CPUs utilized
+2      context-switches          #    0.099 K/sec
+0      cpu-migrations            #    0.000 K/sec
+45      page-faults               #    0.002 M/sec
+12,074,908      cycles                    #    0.599 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+14,570,914      instructions              #    1.21  insns per cycle
+1,059,958      branches                  #   52.563 M/sec
+14,803      branch-misses             #    1.40% of all branches
+
+0.022369973 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 2 1000000
+2000000,
+Performance counter stats for './a.out 2 1000000':
+
+25.262761      task-clock (msec)         #    0.916 CPUs utilized
+3      context-switches          #    0.119 K/sec
+0      cpu-migrations            #    0.000 K/sec
+46      page-faults               #    0.002 M/sec
+15,128,054      cycles                    #    0.599 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+19,577,941      instructions              #    1.29  insns per cycle
+2,060,527      branches                  #   81.564 M/sec
+15,209      branch-misses             #    0.74% of all branches
+
+0.027583287 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 3 1000000
+8000000,
+Performance counter stats for './a.out 3 1000000':
+
+30.017345      task-clock (msec)         #    0.919 CPUs utilized
+1      context-switches          #    0.033 K/sec
+0      cpu-migrations            #    0.000 K/sec
+45      page-faults               #    0.001 M/sec
+17,989,348      cycles                    #    0.599 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+24,547,153      instructions              #    1.36  insns per cycle
+3,057,686      branches                  #  101.864 M/sec
+14,622      branch-misses             #    0.48% of all branches
+
+0.032664623 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 4 1000000
+22000000,
+Performance counter stats for './a.out 4 1000000':
+
+35.214272      task-clock (msec)         #    0.937 CPUs utilized
+3      context-switches          #    0.085 K/sec
+0      cpu-migrations            #    0.000 K/sec
+46      page-faults               #    0.001 M/sec
+21,099,569      cycles                    #    0.599 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+29,577,284      instructions              #    1.40  insns per cycle
+4,060,525      branches                  #  115.309 M/sec
+15,244      branch-misses             #    0.38% of all branches
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 5 1000000
+52000000,
+Performance counter stats for './a.out 5 1000000':
+
+40.171094      task-clock (msec)         #    0.939 CPUs utilized
+2      context-switches          #    0.050 K/sec
+0      cpu-migrations            #    0.000 K/sec
+44      page-faults               #    0.001 M/sec
+24,076,796      cycles                    #    0.599 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+34,563,819      instructions              #    1.44  insns per cycle
+5,059,068      branches                  #  125.938 M/sec
+15,207      branch-misses             #    0.30% of all branches
+
+0.042778389 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 6 1000000
+114000000,
+Performance counter stats for './a.out 6 1000000':
+
+45.389792      task-clock (msec)         #    0.947 CPUs utilized
+5      context-switches          #    0.110 K/sec
+0      cpu-migrations            #    0.000 K/sec
+45      page-faults               #    0.991 K/sec
+27,198,084      cycles                    #    0.599 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+39,600,996      instructions              #    1.46  insns per cycle
+6,062,851      branches                  #  133.573 M/sec
+16,145      branch-misses             #    0.27% of all branches
+
+0.047949776 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 7 1000000
+240000000,
+Performance counter stats for './a.out 7 1000000':
+
+50.521927      task-clock (msec)         #    0.961 CPUs utilized
+0      context-switches          #    0.000 K/sec
+0      cpu-migrations            #    0.000 K/sec
+44      page-faults               #    0.871 K/sec
+30,292,074      cycles                    #    0.600 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+44,637,461      instructions              #    1.47  insns per cycle
+7,069,736      branches                  #  139.934 M/sec
+17,951      branch-misses             #    0.25% of all branches
+
+0.052550854 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 8 1000000
+494000000,
+Performance counter stats for './a.out 8 1000000':
+
+37.071563      task-clock (msec)         #    0.962 CPUs utilized
+0      context-switches          #    0.000 K/sec
+0      cpu-migrations            #    0.000 K/sec
+44      page-faults               #    0.001 M/sec
+33,342,515      cycles                    #    0.899 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+49,575,847      instructions              #    1.49  insns per cycle
+8,060,918      branches                  #  217.442 M/sec
+15,610      branch-misses             #    0.19% of all branches
+
+0.038536112 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 9 1000000
+1004000000,
+Performance counter stats for './a.out 9 1000000':
+
+60.427968      task-clock (msec)         #    0.963 CPUs utilized
+6      context-switches          #    0.099 K/sec
+0      cpu-migrations            #    0.000 K/sec
+47      page-faults               #    0.778 K/sec
+36,218,887      cycles                    #    0.599 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+54,610,573      instructions              #    1.51  insns per cycle
+9,063,868      branches                  #  149.995 M/sec
+16,736      branch-misses             #    0.18% of all branches
+
+0.062777743 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 10 1000000
+2026000000,
+Performance counter stats for './a.out 10 1000000':
+
+65.829740      task-clock (msec)         #    0.969 CPUs utilized
+1      context-switches          #    0.015 K/sec
+0      cpu-migrations            #    0.000 K/sec
+46      page-faults               #    0.699 K/sec
+39,471,976      cycles                    #    0.600 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+59,699,037      instructions              #    1.51  insns per cycle
+10,077,372      branches                  #  153.082 M/sec
+19,893      branch-misses             #    0.20% of all branches
+
+0.067916996 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 11 1000000
+-222967296,
+Performance counter stats for './a.out 11 1000000':
+
+84.226407      task-clock (msec)         #    0.973 CPUs utilized
+1      context-switches          #    0.012 K/sec
+0      cpu-migrations            #    0.000 K/sec
+46      page-faults               #    0.546 K/sec
+50,478,462      cycles                    #    0.599 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+64,676,438      instructions              #    1.28  insns per cycle
+11,072,503      branches                  #  131.461 M/sec
+1,018,401      branch-misses             #    9.20% of all branches
+
+0.086554631 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 12 1000000
+-423934592,
+Performance counter stats for './a.out 12 1000000':
+
+75.158907      task-clock (msec)         #    0.972 CPUs utilized
+1      context-switches          #    0.013 K/sec
+0      cpu-migrations            #    0.000 K/sec
+44      page-faults               #    0.585 K/sec
+45,072,095      cycles                    #    0.600 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+69,576,935      instructions              #    1.54  insns per cycle
+12,060,181      branches                  #  160.462 M/sec
+15,635      branch-misses             #    0.13% of all branches
+
+0.077294353 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 13 1000000
+-823869184,
+Performance counter stats for './a.out 13 1000000':
+
+80.659428      task-clock (msec)         #    0.971 CPUs utilized
+1      context-switches          #    0.012 K/sec
+0      cpu-migrations            #    0.000 K/sec
+45      page-faults               #    0.558 K/sec
+48,370,683      cycles                    #    0.600 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+74,654,102      instructions              #    1.54  insns per cycle
+13,069,383      branches                  #  162.032 M/sec
+17,978      branch-misses             #    0.14% of all branches
+
+0.083057665 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 14 1000000
+-1621738368,
+Performance counter stats for './a.out 14 1000000':
+
+85.788439      task-clock (msec)         #    0.972 CPUs utilized
+2      context-switches          #    0.023 K/sec
+0      cpu-migrations            #    0.000 K/sec
+46      page-faults               #    0.536 K/sec
+51,446,420      cycles                    #    0.600 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+79,676,316      instructions              #    1.55  insns per cycle
+14,072,202      branches                  #  164.034 M/sec
+18,528      branch-misses             #    0.13% of all branches
+
+0.088259728 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 15 1000000
+1079490560,
+Performance counter stats for './a.out 15 1000000':
+
+60.525834      task-clock (msec)         #    0.972 CPUs utilized
+5      context-switches          #    0.083 K/sec
+0      cpu-migrations            #    0.000 K/sec
+46      page-faults               #    0.760 K/sec
+54,434,517      cycles                    #    0.899 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+84,613,819      instructions              #    1.55  insns per cycle
+15,064,208      branches                  #  248.889 M/sec
+16,507      branch-misses             #    0.11% of all branches
+
+0.062271490 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 16 1000000
+-2105986176,
+Performance counter stats for './a.out 16 1000000':
+
+81.149687      task-clock (msec)         #    0.967 CPUs utilized
+10      context-switches          #    0.123 K/sec
+0      cpu-migrations            #    0.000 K/sec
+45      page-faults               #    0.555 K/sec
+57,448,065      cycles                    #    0.708 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+89,660,420      instructions              #    1.56  insns per cycle
+16,068,970      branches                  #  198.016 M/sec
+18,158      branch-misses             #    0.11% of all branches
+
+0.083915109 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 17 1000000
+114994944,
+Performance counter stats for './a.out 17 1000000':
+
+98.718020      task-clock (msec)         #    0.978 CPUs utilized
+3      context-switches          #    0.030 K/sec
+0      cpu-migrations            #    0.000 K/sec
+46      page-faults               #    0.466 K/sec
+60,794,587      cycles                    #    0.616 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+94,780,758      instructions              #    1.56  insns per cycle
+17,087,646      branches                  #  173.096 M/sec
+23,210      branch-misses             #    0.14% of all branches
+
+0.100929057 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 18 1000000
+263989888,
+Performance counter stats for './a.out 18 1000000':
+
+86.942031      task-clock (msec)         #    0.969 CPUs utilized
+4      context-switches          #    0.046 K/sec
+0      cpu-migrations            #    0.000 K/sec
+45      page-faults               #    0.518 K/sec
+63,712,837      cycles                    #    0.733 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+99,753,217      instructions              #    1.57  insns per cycle
+18,084,017      branches                  #  208.001 M/sec
+22,361      branch-misses             #    0.12% of all branches
+
+0.089683212 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 19 1000000
+563979776,
+Performance counter stats for './a.out 19 1000000':
+
+110.442187      task-clock (msec)         #    0.979 CPUs utilized
+1      context-switches          #    0.009 K/sec
+0      cpu-migrations            #    0.000 K/sec
+45      page-faults               #    0.407 K/sec
+66,241,012      cycles                    #    0.600 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+104,624,801      instructions              #    1.58  insns per cycle
+19,065,181      branches                  #  172.626 M/sec
+16,387      branch-misses             #    0.09% of all branches
+
+0.112810575 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 20 1000000
+1165959552,
+Performance counter stats for './a.out 20 1000000':
+
+99.104114      task-clock (msec)         #    0.977 CPUs utilized
+6      context-switches          #    0.061 K/sec
+0      cpu-migrations            #    0.000 K/sec
+45      page-faults               #    0.454 K/sec
+69,264,280      cycles                    #    0.699 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+109,622,484      instructions              #    1.58  insns per cycle
+20,064,840      branches                  #  202.462 M/sec
+17,139      branch-misses             #    0.09% of all branches
+
+0.101448377 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 40 1000000
+-82000000,
+Performance counter stats for './a.out 40 1000000':
+
+181.967762      task-clock (msec)         #    0.986 CPUs utilized
+6      context-switches          #    0.033 K/sec
+0      cpu-migrations            #    0.000 K/sec
+44      page-faults               #    0.242 K/sec
+130,330,072      cycles                    #    0.716 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+209,955,276      instructions              #    1.61  insns per cycle
+40,110,575      branches                  #  220.427 M/sec
+31,373      branch-misses             #    0.08% of all branches
+
+0.184506036 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 80 1000000
+-162000000,
+Performance counter stats for './a.out 80 1000000':
+
+308.526827      task-clock (msec)         #    0.985 CPUs utilized
+39      context-switches          #    0.126 K/sec
+0      cpu-migrations            #    0.000 K/sec
+46      page-faults               #    0.149 K/sec
+259,693,223      cycles                    #    0.842 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+410,412,937      instructions              #    1.58  insns per cycle
+80,165,972      branches                  #  259.835 M/sec
+1,043,853      branch-misses             #    1.30% of all branches
+
+0.313279673 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 160 1000000
+-322000000,
+Performance counter stats for './a.out 160 1000000':
+
+579.026565      task-clock (msec)         #    0.996 CPUs utilized
+2      context-switches          #    0.003 K/sec
+0      cpu-migrations            #    0.000 K/sec
+44      page-faults               #    0.076 K/sec
+500,770,863      cycles                    #    0.865 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+810,789,481      instructions              #    1.62  insns per cycle
+160,219,869      branches                  #  276.706 M/sec
+1,050,151      branch-misses             #    0.66% of all branches
+
+0.581196073 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 320 1000000
+-642000000,
+Performance counter stats for './a.out 320 1000000':
+
+1108.982088      task-clock (msec)         #    0.998 CPUs utilized
+6      context-switches          #    0.005 K/sec
+0      cpu-migrations            #    0.000 K/sec
+44      page-faults               #    0.040 K/sec
+978,670,839      cycles                    #    0.882 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+1,610,270,677      instructions              #    1.65  insns per cycle
+320,126,772      branches                  #  288.667 M/sec
+1,033,317      branch-misses             #    0.32% of all branches
+
+1.111347021 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 640 1000000
+-1282000000,
+Performance counter stats for './a.out 640 1000000':
+
+2198.545423      task-clock (msec)         #    0.999 CPUs utilized
+7      context-switches          #    0.003 K/sec
+0      cpu-migrations            #    0.000 K/sec
+45      page-faults               #    0.020 K/sec
+1,940,073,259      cycles                    #    0.882 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+3,210,960,025      instructions              #    1.66  insns per cycle
+640,191,802      branches                  #  291.189 M/sec
+1,047,063      branch-misses             #    0.16% of all branches
+
+2.201125313 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $ perf stat ./a.out 1280 1000000
+1732967296,
+Performance counter stats for './a.out 1280 1000000':
+
+4345.001836      task-clock (msec)         #    0.999 CPUs utilized
+60      context-switches          #    0.014 K/sec
+0      cpu-migrations            #    0.000 K/sec
+46      page-faults               #    0.011 K/sec
+3,886,291,437      cycles                    #    0.894 GHz
+<not supported>      stalled-cycles-frontend
+<not supported>      stalled-cycles-backend
+6,419,207,864      instructions              #    1.65  insns per cycle
+1,281,310,766      branches                  #  294.893 M/sec
+1,270,993      branch-misses             #    0.10% of all branches
+
+4.349681418 seconds time elapsed
+
+pi@raspberrypi:~/performance/simple_roop $
