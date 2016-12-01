@@ -1,0 +1,306 @@
+[nobuo@localhost fibonacci_test]$ perf stat ./a.out 1 1000000
+arg1 = 1, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 1 1000000':
+
+          2.409977      task-clock:u (msec)       #    0.874 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                45      page-faults:u             #    0.019 M/sec                  
+         2,830,861      cycles:u                  #    1.175 GHz                      (58.87%)
+           589,533      stalled-cycles-frontend:u #   20.83% frontend cycles idle   
+           702,463      stalled-cycles-backend:u  #   24.81% backend cycles idle    
+         8,141,279      instructions:u            #    2.88  insn per cycle         
+                                                  #    0.09  stalled cycles per insn
+         3,028,229      branches:u                # 1256.539 M/sec                  
+               195      branch-misses:u           #    0.01% of all branches          (59.92%)
+
+       0.002758585 seconds time elapsed
+
+[nobuo@localhost fibonacci_test]$ perf stat ./a.out 2 1000000
+arg1 = 2, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 2 1000000':
+
+          5.068670      task-clock:u (msec)       #    0.937 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                46      page-faults:u             #    0.009 M/sec                  
+         7,250,494      cycles:u                  #    1.430 GHz                      (80.40%)
+         1,029,432      stalled-cycles-frontend:u #   14.20% frontend cycles idle     (80.33%)
+         3,115,811      stalled-cycles-backend:u  #   42.97% backend cycles idle      (60.64%)
+        19,470,942      instructions:u            #    2.69  insn per cycle         
+                                                  #    0.16  stalled cycles per insn  (80.32%)
+         6,801,874      branches:u                # 1341.945 M/sec                  
+               168      branch-misses:u           #    0.00% of all branches          (83.13%)
+
+       0.005412291 seconds time elapsed
+
+[nobuo@localhost fibonacci_test]$ perf stat ./a.out 3 1000000
+arg1 = 3, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 3 1000000':
+
+         12.539164      task-clock:u (msec)       #    0.963 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                45      page-faults:u             #    0.004 M/sec                  
+        20,848,543      cycles:u                  #    1.663 GHz                      (84.12%)
+         1,041,558      stalled-cycles-frontend:u #    5.00% frontend cycles idle     (84.09%)
+         1,296,555      stalled-cycles-backend:u  #    6.22% backend cycles idle      (68.18%)
+        47,980,679      instructions:u            #    2.30  insn per cycle         
+                                                  #    0.03  stalled cycles per insn  (84.09%)
+        14,732,403      branches:u                # 1174.911 M/sec                    (84.06%)
+                67      branch-misses:u           #    0.00% of all branches          (83.59%)
+
+       0.013020734 seconds time elapsed
+
+[nobuo@localhost fibonacci_test]$ perf stat ./a.out 4 1000000
+arg1 = 4, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 4 1000000':
+
+         19.828780      task-clock:u (msec)       #    0.982 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                45      page-faults:u             #    0.002 M/sec                  
+        44,322,899      cycles:u                  #    2.235 GHz                      (79.86%)
+         1,097,479      stalled-cycles-frontend:u #    2.48% frontend cycles idle     (84.39%)
+         8,845,180      stalled-cycles-backend:u  #   19.96% backend cycles idle      (69.76%)
+       117,158,624      instructions:u            #    2.64  insn per cycle         
+                                                  #    0.08  stalled cycles per insn  (84.86%)
+        26,561,384      branches:u                # 1339.537 M/sec                    (84.97%)
+             3,834      branch-misses:u           #    0.01% of all branches          (83.73%)
+
+       0.020187240 seconds time elapsed
+
+[nobuo@localhost fibonacci_test]$ perf stat ./a.out 5 1000000
+arg1 = 5, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 5 1000000':
+
+         34.240710      task-clock:u (msec)       #    0.985 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                45      page-faults:u             #    0.001 M/sec                  
+        87,387,197      cycles:u                  #    2.552 GHz                      (82.44%)
+         3,241,044      stalled-cycles-frontend:u #    3.71% frontend cycles idle     (82.53%)
+        13,423,139      stalled-cycles-backend:u  #   15.36% backend cycles idle      (64.99%)
+       219,421,808      instructions:u            #    2.51  insn per cycle         
+                                                  #    0.06  stalled cycles per insn  (82.48%)
+        48,984,926      branches:u                # 1430.605 M/sec                    (85.33%)
+             5,228      branch-misses:u           #    0.01% of all branches          (85.34%)
+
+       0.034752023 seconds time elapsed
+
+[nobuo@localhost fibonacci_test]$ perf stat ./a.out 6 1000000
+arg1 = 6, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 6 1000000':
+
+         56.817039      task-clock:u (msec)       #    0.993 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                46      page-faults:u             #    0.810 K/sec                  
+       163,851,082      cycles:u                  #    2.884 GHz                      (82.41%)
+        11,894,776      stalled-cycles-frontend:u #    7.26% frontend cycles idle     (82.33%)
+        20,745,553      stalled-cycles-backend:u  #   12.66% backend cycles idle      (67.87%)
+       424,846,238      instructions:u            #    2.59  insn per cycle         
+                                                  #    0.05  stalled cycles per insn  (84.04%)
+        82,970,644      branches:u                # 1460.313 M/sec                    (84.29%)
+             5,729      branch-misses:u           #    0.01% of all branches          (84.07%)
+
+       0.057201107 seconds time elapsed
+
+[nobuo@localhost fibonacci_test]$ perf stat ./a.out 7 1000000
+arg1 = 7, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 7 1000000':
+
+        104.870622      task-clock:u (msec)       #    0.995 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                46      page-faults:u             #    0.439 K/sec                  
+       305,939,783      cycles:u                  #    2.917 GHz                      (82.93%)
+        31,686,419      stalled-cycles-frontend:u #   10.36% frontend cycles idle     (82.85%)
+        13,289,285      stalled-cycles-backend:u  #    4.34% backend cycles idle      (67.47%)
+       706,613,196      instructions:u            #    2.31  insn per cycle         
+                                                  #    0.04  stalled cycles per insn  (83.79%)
+       136,439,915      branches:u                # 1301.031 M/sec                    (83.85%)
+         1,313,322      branch-misses:u           #    0.96% of all branches          (82.95%)
+
+       0.105409924 seconds time elapsed
+
+[nobuo@localhost fibonacci_test]$ perf stat ./a.out 8 1000000
+arg1 = 8, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 8 1000000':
+
+        167.270365      task-clock:u (msec)       #    0.997 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                46      page-faults:u             #    0.275 K/sec                  
+       537,513,182      cycles:u                  #    3.213 GHz                      (83.36%)
+        88,863,261      stalled-cycles-frontend:u #   16.53% frontend cycles idle     (83.06%)
+        14,300,480      stalled-cycles-backend:u  #    2.66% backend cycles idle      (66.61%)
+     1,230,079,828      instructions:u            #    2.29  insn per cycle         
+                                                  #    0.07  stalled cycles per insn  (83.20%)
+       222,194,460      branches:u                # 1328.355 M/sec                    (83.97%)
+         1,096,896      branch-misses:u           #    0.49% of all branches          (83.21%)
+
+       0.167743816 seconds time elapsed
+
+[nobuo@localhost fibonacci_test]$ perf stat ./a.out 9 1000000
+arg1 = 9, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 9 1000000':
+
+        273.911164      task-clock:u (msec)       #    0.998 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                46      page-faults:u             #    0.168 K/sec                  
+       896,390,815      cycles:u                  #    3.273 GHz                      (83.23%)
+       148,496,902      stalled-cycles-frontend:u #   16.57% frontend cycles idle     (83.17%)
+        62,775,398      stalled-cycles-backend:u  #    7.00% backend cycles idle      (66.82%)
+     1,976,016,811      instructions:u            #    2.20  insn per cycle         
+                                                  #    0.08  stalled cycles per insn  (83.61%)
+       359,676,037      branches:u                # 1313.112 M/sec                    (83.58%)
+         3,226,236      branch-misses:u           #    0.90% of all branches          (83.23%)
+
+       0.274449610 seconds time elapsed
+
+[nobuo@localhost fibonacci_test]$ perf stat ./a.out 10 1000000
+arg1 = 10, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 10 1000000':
+
+        475.738414      task-clock:u (msec)       #    0.999 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                45      page-faults:u             #    0.095 K/sec                  
+     1,575,047,399      cycles:u                  #    3.311 GHz                      (83.21%)
+       373,511,726      stalled-cycles-frontend:u #   23.71% frontend cycles idle     (83.38%)
+       107,608,599      stalled-cycles-backend:u  #    6.83% backend cycles idle      (66.82%)
+     3,278,011,990      instructions:u            #    2.08  insn per cycle         
+                                                  #    0.11  stalled cycles per insn  (83.41%)
+       579,823,051      branches:u                # 1218.785 M/sec                    (83.38%)
+         5,729,195      branch-misses:u           #    0.99% of all branches          (83.33%)
+
+       0.476352741 seconds time elapsed
+
+[nobuo@localhost fibonacci_test]$ perf stat ./a.out 11 1000000
+arg1 = 11, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 11 1000000':
+
+        784.195800      task-clock:u (msec)       #    0.999 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                46      page-faults:u             #    0.059 K/sec                  
+     2,594,540,052      cycles:u                  #    3.309 GHz                      (83.32%)
+       635,416,861      stalled-cycles-frontend:u #   24.49% frontend cycles idle     (83.30%)
+       197,273,256      stalled-cycles-backend:u  #    7.60% backend cycles idle      (66.62%)
+     5,145,517,207      instructions:u            #    1.98  insn per cycle         
+                                                  #    0.12  stalled cycles per insn  (83.30%)
+       928,646,122      branches:u                # 1184.202 M/sec                    (83.43%)
+        14,079,518      branch-misses:u           #    1.52% of all branches          (83.34%)
+
+       0.785158348 seconds time elapsed
+
+[nobuo@localhost fibonacci_test]$ perf stat ./a.out 12 1000000
+arg1 = 12, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 12 1000000':
+
+       1311.100823      task-clock:u (msec)       #    0.999 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                46      page-faults:u             #    0.035 K/sec                  
+     4,386,819,147      cycles:u                  #    3.346 GHz                      (83.30%)
+     1,386,106,736      stalled-cycles-frontend:u #   31.60% frontend cycles idle     (83.31%)
+       193,111,209      stalled-cycles-backend:u  #    4.40% backend cycles idle      (66.68%)
+     8,386,351,643      instructions:u            #    1.91  insn per cycle         
+                                                  #    0.17  stalled cycles per insn  (83.38%)
+     1,489,400,399      branches:u                # 1135.992 M/sec                    (83.34%)
+        21,197,497      branch-misses:u           #    1.42% of all branches          (83.40%)
+
+       1.312193250 seconds time elapsed
+
+[nobuo@localhost fibonacci_test]$ perf stat ./a.out 13 1000000
+arg1 = 13, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 13 1000000':
+
+       2135.589119      task-clock:u (msec)       #    0.999 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                46      page-faults:u             #    0.022 K/sec                  
+     6,923,655,699      cycles:u                  #    3.242 GHz                      (83.32%)
+     2,001,564,108      stalled-cycles-frontend:u #   28.91% frontend cycles idle     (83.34%)
+       426,173,227      stalled-cycles-backend:u  #    6.16% backend cycles idle      (66.69%)
+    13,136,133,801      instructions:u            #    1.90  insn per cycle         
+                                                  #    0.15  stalled cycles per insn  (83.34%)
+     2,396,841,598      branches:u                # 1122.333 M/sec                    (83.33%)
+        39,403,900      branch-misses:u           #    1.64% of all branches          (83.35%)
+
+       2.137182796 seconds time elapsed
+
+[nobuo@localhost fibonacci_test]$ perf stat ./a.out 14 1000000
+arg1 = 14, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 14 1000000':
+
+       3535.430083      task-clock:u (msec)       #    0.999 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                47      page-faults:u             #    0.013 K/sec                  
+    11,711,673,966      cycles:u                  #    3.313 GHz                      (83.32%)
+     4,022,191,214      stalled-cycles-frontend:u #   34.34% frontend cycles idle     (83.33%)
+       932,933,935      stalled-cycles-backend:u  #    7.97% backend cycles idle      (66.69%)
+    21,294,404,193      instructions:u            #    1.82  insn per cycle         
+                                                  #    0.19  stalled cycles per insn  (83.35%)
+     3,837,281,143      branches:u                # 1085.379 M/sec                    (83.35%)
+        74,245,720      branch-misses:u           #    1.93% of all branches          (83.32%)
+
+       3.537626775 seconds time elapsed
+
+[nobuo@localhost fibonacci_test]$ perf stat ./a.out 15 1000000
+arg1 = 15, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 15 1000000':
+
+       5665.228828      task-clock:u (msec)       #    0.999 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                45      page-faults:u             #    0.008 K/sec                  
+    18,364,178,162      cycles:u                  #    3.242 GHz                      (83.36%)
+     5,811,296,787      stalled-cycles-frontend:u #   31.64% frontend cycles idle     (83.30%)
+     1,490,401,423      stalled-cycles-backend:u  #    8.12% backend cycles idle      (66.66%)
+    33,639,309,642      instructions:u            #    1.83  insn per cycle         
+                                                  #    0.17  stalled cycles per insn  (83.32%)
+     6,215,104,464      branches:u                # 1097.062 M/sec                    (83.36%)
+       116,984,788      branch-misses:u           #    1.88% of all branches          (83.32%)
+
+       5.669028287 seconds time elapsed
+
+[nobuo@localhost fibonacci_test]$ perf stat ./a.out 16 1000000
+arg1 = 16, arg2 = 1000000
+0,
+ Performance counter stats for './a.out 16 1000000':
+
+       9187.110571      task-clock:u (msec)       #    0.999 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                47      page-faults:u             #    0.005 K/sec                  
+    30,203,979,006      cycles:u                  #    3.288 GHz                      (83.35%)
+    10,422,495,490      stalled-cycles-frontend:u #   34.51% frontend cycles idle     (83.31%)
+     2,436,705,453      stalled-cycles-backend:u  #    8.07% backend cycles idle      (66.67%)
+    54,434,420,387      instructions:u            #    1.80  insn per cycle         
+                                                  #    0.19  stalled cycles per insn  (83.32%)
+     9,965,890,574      branches:u                # 1084.769 M/sec                    (83.34%)
+       194,659,916      branch-misses:u           #    1.95% of all branches          (83.33%)
+
+       9.192519368 seconds time elapsed
+
+[nobuo@localhost fibonacci_test]$ 
+

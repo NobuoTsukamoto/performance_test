@@ -1,0 +1,470 @@
+[nobuo@localhost simple_roop]$ perf stat ./a.out 1 1000000
+0,
+ Performance counter stats for './a.out 1 1000000':
+
+          2.917694      task-clock:u (msec)       #    0.900 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                47      page-faults:u             #    0.016 M/sec                  
+         4,381,875      cycles:u                  #    1.502 GHz                      (65.78%)
+         1,231,738      stalled-cycles-frontend:u #   28.11% frontend cycles idle     (65.86%)
+         1,906,115      stalled-cycles-backend:u  #   43.50% backend cycles idle    
+        14,139,682      instructions:u            #    3.23  insn per cycle         
+                                                  #    0.13  stalled cycles per insn
+         3,027,876      branches:u                # 1037.763 M/sec                  
+             3,682      branch-misses:u           #    0.12% of all branches          (95.54%)
+
+       0.003240717 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 2 1000000
+2000000,
+ Performance counter stats for './a.out 2 1000000':
+
+          3.825188      task-clock:u (msec)       #    0.884 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                46      page-faults:u             #    0.012 M/sec                  
+         5,183,526      cycles:u                  #    1.355 GHz                      (74.19%)
+         1,136,424      stalled-cycles-frontend:u #   21.92% frontend cycles idle     (74.11%)
+           713,791      stalled-cycles-backend:u  #   13.77% backend cycles idle      (76.71%)
+        19,140,062      instructions:u            #    3.69  insn per cycle         
+                                                  #    0.06  stalled cycles per insn
+         4,027,973      branches:u                # 1053.013 M/sec                  
+             3,055      branch-misses:u           #    0.08% of all branches          (75.78%)
+
+       0.004328916 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 3 1000000
+8000000,
+ Performance counter stats for './a.out 3 1000000':
+
+          4.261982      task-clock:u (msec)       #    0.931 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                45      page-faults:u             #    0.011 M/sec                  
+         7,395,531      cycles:u                  #    1.735 GHz                      (76.61%)
+         1,318,767      stalled-cycles-frontend:u #   17.83% frontend cycles idle     (76.93%)
+         3,962,006      stalled-cycles-backend:u  #   53.57% backend cycles idle      (53.21%)
+        22,759,320      instructions:u            #    3.08  insn per cycle         
+                                                  #    0.17  stalled cycles per insn  (76.63%)
+         4,911,130      branches:u                # 1152.311 M/sec                  
+             3,743      branch-misses:u           #    0.08% of all branches          (98.51%)
+
+       0.004576482 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 4 1000000
+22000000,
+ Performance counter stats for './a.out 4 1000000':
+
+          6.477034      task-clock:u (msec)       #    0.923 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                44      page-faults:u             #    0.007 M/sec                  
+        10,040,178      cycles:u                  #    1.550 GHz                      (84.72%)
+         3,786,266      stalled-cycles-frontend:u #   37.71% frontend cycles idle     (84.54%)
+         1,279,761      stalled-cycles-backend:u  #   12.75% backend cycles idle      (71.01%)
+        28,513,775      instructions:u            #    2.84  insn per cycle         
+                                                  #    0.13  stalled cycles per insn  (84.66%)
+         5,919,000      branches:u                #  913.844 M/sec                    (84.61%)
+               588      branch-misses:u           #    0.01% of all branches          (86.36%)
+
+       0.007014885 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 5 1000000
+52000000,
+ Performance counter stats for './a.out 5 1000000':
+
+          8.252998      task-clock:u (msec)       #    0.948 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                46      page-faults:u             #    0.006 M/sec                  
+        10,045,668      cycles:u                  #    1.217 GHz                      (75.88%)
+         2,208,294      stalled-cycles-frontend:u #   21.98% frontend cycles idle     (87.46%)
+         1,965,609      stalled-cycles-backend:u  #   19.57% backend cycles idle      (75.72%)
+        33,375,829      instructions:u            #    3.32  insn per cycle         
+                                                  #    0.07  stalled cycles per insn  (87.83%)
+         6,893,206      branches:u                #  835.237 M/sec                    (88.12%)
+             3,086      branch-misses:u           #    0.04% of all branches          (76.11%)
+
+       0.008704188 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 6 1000000
+114000000,
+ Performance counter stats for './a.out 6 1000000':
+
+          9.084123      task-clock:u (msec)       #    0.950 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                45      page-faults:u             #    0.005 M/sec                  
+        13,236,897      cycles:u                  #    1.457 GHz                      (78.05%)
+         4,043,919      stalled-cycles-frontend:u #   30.55% frontend cycles idle     (78.03%)
+         4,282,077      stalled-cycles-backend:u  #   32.35% backend cycles idle      (77.24%)
+        38,701,846      instructions:u            #    2.92  insn per cycle         
+                                                  #    0.11  stalled cycles per insn  (89.04%)
+         7,958,643      branches:u                #  876.105 M/sec                    (89.13%)
+             2,915      branch-misses:u           #    0.04% of all branches          (80.28%)
+
+       0.009564972 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 7 1000000
+240000000,
+ Performance counter stats for './a.out 7 1000000':
+
+         11.350986      task-clock:u (msec)       #    0.964 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                47      page-faults:u             #    0.004 M/sec                  
+        16,341,699      cycles:u                  #    1.440 GHz                      (82.46%)
+         5,919,354      stalled-cycles-frontend:u #   36.22% frontend cycles idle     (82.44%)
+         4,634,279      stalled-cycles-backend:u  #   28.36% backend cycles idle      (64.78%)
+        44,746,027      instructions:u            #    2.74  insn per cycle         
+                                                  #    0.13  stalled cycles per insn  (82.37%)
+         8,499,764      branches:u                #  748.813 M/sec                    (82.53%)
+             1,492      branch-misses:u           #    0.02% of all branches          (89.86%)
+
+       0.011774958 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 8 1000000
+494000000,
+ Performance counter stats for './a.out 8 1000000':
+
+          8.731230      task-clock:u (msec)       #    0.952 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                45      page-faults:u             #    0.005 M/sec                  
+        16,586,263      cycles:u                  #    1.900 GHz                      (77.19%)
+         5,373,743      stalled-cycles-frontend:u #   32.40% frontend cycles idle     (87.43%)
+         1,348,777      stalled-cycles-backend:u  #    8.13% backend cycles idle      (77.26%)
+        48,848,083      instructions:u            #    2.95  insn per cycle         
+                                                  #    0.11  stalled cycles per insn  (88.69%)
+         9,926,001      branches:u                # 1136.839 M/sec                    (88.58%)
+             3,023      branch-misses:u           #    0.03% of all branches          (77.49%)
+
+       0.009169115 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 9 1000000
+1004000000,
+ Performance counter stats for './a.out 9 1000000':
+
+          8.931567      task-clock:u (msec)       #    0.969 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                46      page-faults:u             #    0.005 M/sec                  
+        19,264,287      cycles:u                  #    2.157 GHz                      (77.64%)
+         7,089,696      stalled-cycles-frontend:u #   36.80% frontend cycles idle     (77.75%)
+         1,110,061      stalled-cycles-backend:u  #    5.76% backend cycles idle      (75.52%)
+        53,842,025      instructions:u            #    2.79  insn per cycle         
+                                                  #    0.13  stalled cycles per insn  (88.82%)
+        10,959,832      branches:u                # 1227.089 M/sec                    (88.82%)
+             3,593      branch-misses:u           #    0.03% of all branches          (86.80%)
+
+       0.009221151 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 10 1000000
+2026000000,
+ Performance counter stats for './a.out 10 1000000':
+
+          8.437764      task-clock:u (msec)       #    0.965 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                46      page-faults:u             #    0.005 M/sec                  
+        21,889,729      cycles:u                  #    2.594 GHz                      (76.36%)
+         8,287,568      stalled-cycles-frontend:u #   37.86% frontend cycles idle     (76.33%)
+         6,946,021      stalled-cycles-backend:u  #   31.73% backend cycles idle      (75.76%)
+        57,849,894      instructions:u            #    2.64  insn per cycle         
+                                                  #    0.14  stalled cycles per insn  (88.19%)
+        11,761,754      branches:u                # 1393.942 M/sec                    (88.17%)
+             3,401      branch-misses:u           #    0.03% of all branches          (85.30%)
+
+       0.008746963 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 11 1000000
+-222967296,
+ Performance counter stats for './a.out 11 1000000':
+
+         12.143620      task-clock:u (msec)       #    0.969 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                45      page-faults:u             #    0.004 M/sec                  
+        23,691,885      cycles:u                  #    1.951 GHz                      (83.36%)
+         9,225,284      stalled-cycles-frontend:u #   38.94% frontend cycles idle     (83.58%)
+         3,110,824      stalled-cycles-backend:u  #   13.13% backend cycles idle      (67.13%)
+        64,100,196      instructions:u            #    2.71  insn per cycle         
+                                                  #    0.14  stalled cycles per insn  (83.56%)
+        13,029,517      branches:u                # 1072.952 M/sec                    (83.48%)
+             4,546      branch-misses:u           #    0.03% of all branches          (83.47%)
+
+       0.012529119 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 12 1000000
+-423934592,
+ Performance counter stats for './a.out 12 1000000':
+
+         14.058083      task-clock:u (msec)       #    0.968 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                45      page-faults:u             #    0.003 M/sec                  
+        28,095,025      cycles:u                  #    1.998 GHz                      (78.72%)
+        13,589,175      stalled-cycles-frontend:u #   48.37% frontend cycles idle     (85.63%)
+         2,354,971      stalled-cycles-backend:u  #    8.38% backend cycles idle      (71.62%)
+        68,846,596      instructions:u            #    2.45  insn per cycle         
+                                                  #    0.20  stalled cycles per insn  (85.81%)
+        13,985,410      branches:u                #  994.831 M/sec                    (86.32%)
+             5,061      branch-misses:u           #    0.04% of all branches          (78.74%)
+
+       0.014521249 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 13 1000000
+-823869184,
+ Performance counter stats for './a.out 13 1000000':
+
+         14.673872      task-clock:u (msec)       #    0.974 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                44      page-faults:u             #    0.003 M/sec                  
+        27,422,138      cycles:u                  #    1.869 GHz                      (79.69%)
+        11,022,716      stalled-cycles-frontend:u #   40.20% frontend cycles idle     (79.61%)
+         8,002,522      stalled-cycles-backend:u  #   29.18% backend cycles idle      (71.68%)
+        74,532,730      instructions:u            #    2.72  insn per cycle         
+                                                  #    0.15  stalled cycles per insn  (86.36%)
+        15,117,120      branches:u                # 1030.207 M/sec                    (86.41%)
+             4,099      branch-misses:u           #    0.03% of all branches          (85.35%)
+
+       0.015072193 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 14 1000000
+-1621738368,
+ Performance counter stats for './a.out 14 1000000':
+
+         15.134039      task-clock:u (msec)       #    0.968 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                44      page-faults:u             #    0.003 M/sec                  
+        28,943,254      cycles:u                  #    1.912 GHz                      (80.23%)
+        11,729,283      stalled-cycles-frontend:u #   40.53% frontend cycles idle     (80.23%)
+         9,688,948      stalled-cycles-backend:u  #   33.48% backend cycles idle      (72.88%)
+        79,395,223      instructions:u            #    2.74  insn per cycle         
+                                                  #    0.15  stalled cycles per insn  (86.80%)
+        16,052,276      branches:u                # 1060.674 M/sec                    (86.87%)
+             2,978      branch-misses:u           #    0.02% of all branches          (81.81%)
+
+       0.015638310 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 15 1000000
+1079490560,
+ Performance counter stats for './a.out 15 1000000':
+
+         16.047538      task-clock:u (msec)       #    0.974 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                45      page-faults:u             #    0.003 M/sec                  
+        31,459,814      cycles:u                  #    1.960 GHz                      (81.37%)
+        13,059,932      stalled-cycles-frontend:u #   41.51% frontend cycles idle     (81.37%)
+         9,152,346      stalled-cycles-backend:u  #   29.09% backend cycles idle      (66.84%)
+        79,485,521      instructions:u            #    2.53  insn per cycle         
+                                                  #    0.16  stalled cycles per insn  (86.75%)
+        17,252,627      branches:u                # 1075.095 M/sec                    (87.55%)
+             4,465      branch-misses:u           #    0.03% of all branches          (87.00%)
+
+       0.016474726 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 16 1000000
+-2105986176,
+ Performance counter stats for './a.out 16 1000000':
+
+         16.554777      task-clock:u (msec)       #    0.979 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                47      page-faults:u             #    0.003 M/sec                  
+        33,723,615      cycles:u                  #    2.037 GHz                      (81.94%)
+        14,077,822      stalled-cycles-frontend:u #   41.74% frontend cycles idle     (81.94%)
+         2,120,709      stalled-cycles-backend:u  #    6.29% backend cycles idle      (63.80%)
+        88,525,002      instructions:u            #    2.63  insn per cycle         
+                                                  #    0.16  stalled cycles per insn  (81.90%)
+        17,503,919      branches:u                # 1057.333 M/sec                    (87.55%)
+             3,995      branch-misses:u           #    0.02% of all branches          (86.99%)
+
+       0.016918466 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 17 1000000
+114994944,
+ Performance counter stats for './a.out 17 1000000':
+
+         18.364739      task-clock:u (msec)       #    0.978 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                45      page-faults:u             #    0.002 M/sec                  
+        35,258,069      cycles:u                  #    1.920 GHz                      (83.42%)
+        15,410,754      stalled-cycles-frontend:u #   43.71% frontend cycles idle     (83.69%)
+         2,140,728      stalled-cycles-backend:u  #    6.07% backend cycles idle      (67.25%)
+        95,040,902      instructions:u            #    2.70  insn per cycle         
+                                                  #    0.16  stalled cycles per insn  (83.57%)
+        18,647,512      branches:u                # 1015.398 M/sec                    (83.88%)
+             4,704      branch-misses:u           #    0.03% of all branches          (83.43%)
+
+       0.018780718 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 18 1000000
+263989888,
+ Performance counter stats for './a.out 18 1000000':
+
+         18.285500      task-clock:u (msec)       #    0.979 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                46      page-faults:u             #    0.003 M/sec                  
+        37,806,314      cycles:u                  #    2.068 GHz                      (83.45%)
+        16,723,455      stalled-cycles-frontend:u #   44.23% frontend cycles idle     (83.58%)
+         9,965,690      stalled-cycles-backend:u  #   26.36% backend cycles idle      (67.35%)
+        97,542,508      instructions:u            #    2.58  insn per cycle         
+                                                  #    0.17  stalled cycles per insn  (83.61%)
+        19,729,016      branches:u                # 1078.943 M/sec                    (83.64%)
+             4,834      branch-misses:u           #    0.02% of all branches          (82.69%)
+
+       0.018669460 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 19 1000000
+563979776,
+ Performance counter stats for './a.out 19 1000000':
+
+         18.430289      task-clock:u (msec)       #    0.974 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                45      page-faults:u             #    0.002 M/sec                  
+        40,581,186      cycles:u                  #    2.202 GHz                      (83.67%)
+        17,535,309      stalled-cycles-frontend:u #   43.21% frontend cycles idle     (83.81%)
+        14,134,053      stalled-cycles-backend:u  #   34.83% backend cycles idle      (67.49%)
+       102,332,260      instructions:u            #    2.52  insn per cycle         
+                                                  #    0.17  stalled cycles per insn  (83.73%)
+        20,077,227      branches:u                # 1089.360 M/sec                    (83.85%)
+               418      branch-misses:u           #    0.00% of all branches          (84.47%)
+
+       0.018927685 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 20 1000000
+1165959552,
+ Performance counter stats for './a.out 20 1000000':
+
+         19.089188      task-clock:u (msec)       #    0.982 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                45      page-faults:u             #    0.002 M/sec                  
+        42,196,604      cycles:u                  #    2.210 GHz                      (84.28%)
+        18,760,253      stalled-cycles-frontend:u #   44.46% frontend cycles idle     (84.33%)
+         6,891,044      stalled-cycles-backend:u  #   16.33% backend cycles idle      (68.65%)
+       107,834,006      instructions:u            #    2.56  insn per cycle         
+                                                  #    0.17  stalled cycles per insn  (84.33%)
+        21,791,980      branches:u                # 1141.588 M/sec                    (84.30%)
+             3,407      branch-misses:u           #    0.02% of all branches          (79.06%)
+
+       0.019431265 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 40 1000000
+-82000000,
+ Performance counter stats for './a.out 40 1000000':
+
+         28.077172      task-clock:u (msec)       #    0.988 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                46      page-faults:u             #    0.002 M/sec                  
+        81,569,642      cycles:u                  #    2.905 GHz                      (82.09%)
+        38,908,403      stalled-cycles-frontend:u #   47.70% frontend cycles idle     (82.30%)
+        46,571,434      stalled-cycles-backend:u  #   57.09% backend cycles idle      (66.90%)
+       202,915,876      instructions:u            #    2.49  insn per cycle         
+                                                  #    0.23  stalled cycles per insn  (85.57%)
+        41,826,794      branches:u                # 1489.708 M/sec                    (85.63%)
+             4,938      branch-misses:u           #    0.01% of all branches          (85.34%)
+
+       0.028406218 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 80 1000000
+-162000000,
+ Performance counter stats for './a.out 80 1000000':
+
+         63.989970      task-clock:u (msec)       #    0.993 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                46      page-faults:u             #    0.719 K/sec                  
+       181,092,704      cycles:u                  #    2.830 GHz                      (82.84%)
+        22,295,925      stalled-cycles-frontend:u #   12.31% frontend cycles idle     (82.90%)
+         6,499,208      stalled-cycles-backend:u  #    3.59% backend cycles idle      (66.82%)
+       403,352,982      instructions:u            #    2.23  insn per cycle         
+                                                  #    0.06  stalled cycles per insn  (84.26%)
+        81,732,346      branches:u                # 1277.268 M/sec                    (84.38%)
+         1,003,911      branch-misses:u           #    1.23% of all branches          (83.82%)
+
+       0.064417647 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 160 1000000
+-322000000,
+ Performance counter stats for './a.out 160 1000000':
+
+        109.621227      task-clock:u (msec)       #    0.996 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                47      page-faults:u             #    0.429 K/sec                  
+       341,667,955      cycles:u                  #    3.117 GHz                      (82.67%)
+        23,034,663      stalled-cycles-frontend:u #    6.74% frontend cycles idle     (83.51%)
+        59,578,423      stalled-cycles-backend:u  #   17.44% backend cycles idle      (67.16%)
+       809,913,420      instructions:u            #    2.37  insn per cycle         
+                                                  #    0.07  stalled cycles per insn  (83.53%)
+       161,841,289      branches:u                # 1476.368 M/sec                    (83.61%)
+         1,004,811      branch-misses:u           #    0.62% of all branches          (83.55%)
+
+       0.110069668 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 320 1000000
+-642000000,
+ Performance counter stats for './a.out 320 1000000':
+
+        203.637341      task-clock:u (msec)       #    0.998 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                46      page-faults:u             #    0.226 K/sec                  
+       663,633,674      cycles:u                  #    3.259 GHz                      (83.36%)
+        26,186,733      stalled-cycles-frontend:u #    3.95% frontend cycles idle     (83.25%)
+        13,793,348      stalled-cycles-backend:u  #    2.08% backend cycles idle      (66.71%)
+     1,606,814,069      instructions:u            #    2.42  insn per cycle         
+                                                  #    0.02  stalled cycles per insn  (83.32%)
+       322,008,439      branches:u                # 1581.284 M/sec                    (83.32%)
+         1,000,234      branch-misses:u           #    0.31% of all branches          (83.66%)
+
+       0.204125824 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 640 1000000
+-1282000000,
+ Performance counter stats for './a.out 640 1000000':
+
+        399.865880      task-clock:u (msec)       #    0.998 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                45      page-faults:u             #    0.113 K/sec                  
+     1,301,387,078      cycles:u                  #    3.255 GHz                      (83.26%)
+        26,283,779      stalled-cycles-frontend:u #    2.02% frontend cycles idle     (83.24%)
+       212,500,434      stalled-cycles-backend:u  #   16.33% backend cycles idle      (66.66%)
+     3,203,058,765      instructions:u            #    2.46  insn per cycle         
+                                                  #    0.07  stalled cycles per insn  (83.46%)
+       641,502,196      branches:u                # 1604.293 M/sec                    (83.52%)
+         1,006,604      branch-misses:u           #    0.16% of all branches          (83.48%)
+
+       0.400474361 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ perf stat ./a.out 1280 1000000
+1732967296,
+ Performance counter stats for './a.out 1280 1000000':
+
+        782.848137      task-clock:u (msec)       #    0.999 CPUs utilized          
+                 0      context-switches:u        #    0.000 K/sec                  
+                 0      cpu-migrations:u          #    0.000 K/sec                  
+                46      page-faults:u             #    0.059 K/sec                  
+     2,594,924,869      cycles:u                  #    3.315 GHz                      (83.24%)
+        48,812,796      stalled-cycles-frontend:u #    1.88% frontend cycles idle     (83.29%)
+        74,943,803      stalled-cycles-backend:u  #    2.89% backend cycles idle      (66.80%)
+     6,406,240,004      instructions:u            #    2.47  insn per cycle         
+                                                  #    0.01  stalled cycles per insn  (83.42%)
+     1,282,442,766      branches:u                # 1638.176 M/sec                    (83.38%)
+         1,008,243      branch-misses:u           #    0.08% of all branches          (83.31%)
+
+       0.783745424 seconds time elapsed
+
+[nobuo@localhost simple_roop]$ 
+

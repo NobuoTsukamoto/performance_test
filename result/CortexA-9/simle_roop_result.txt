@@ -1,0 +1,470 @@
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 1 1000000
+0,
+ Performance counter stats for './a.out 1 1000000':
+
+         14.856322      task-clock (msec)         #    0.894 CPUs utilized          
+                 4      context-switches          #    0.269 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                37      page-faults               #    0.002 M/sec                  
+           9868915      cycles                    #    0.664 GHz                    
+            377392      stalled-cycles-frontend   #    3.82% frontend cycles idle   
+           1654360      stalled-cycles-backend    #   16.76% backend  cycles idle   
+          16081444      instructions              #    1.63  insns per cycle        
+                                                  #    0.10  stalled cycles per insn
+           1097204      branches                  #   73.854 M/sec                  
+             27957      branch-misses             #    2.55% of all branches        
+
+       0.016625025 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 2 1000000
+2000000,
+ Performance counter stats for './a.out 2 1000000':
+
+         20.072622      task-clock (msec)         #    0.922 CPUs utilized          
+                 4      context-switches          #    0.199 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.002 M/sec                  
+          13348183      cycles                    #    0.665 GHz                    
+            364124      stalled-cycles-frontend   #    2.73% frontend cycles idle   
+           2629811      stalled-cycles-backend    #   19.70% backend  cycles idle   
+          21088743      instructions              #    1.58  insns per cycle        
+                                                  #    0.12  stalled cycles per insn
+           2098676      branches                  #  104.554 M/sec                  
+             28715      branch-misses             #    1.37% of all branches        
+
+       0.021767354 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 3 1000000
+8000000,
+ Performance counter stats for './a.out 3 1000000':
+
+         23.169226      task-clock (msec)         #    0.928 CPUs utilized          
+                 5      context-switches          #    0.216 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.002 M/sec                  
+          15384640      cycles                    #    0.664 GHz                    
+            377362      stalled-cycles-frontend   #    2.45% frontend cycles idle   
+           2661189      stalled-cycles-backend    #   17.30% backend  cycles idle   
+          26095458      instructions              #    1.70  insns per cycle        
+                                                  #    0.10  stalled cycles per insn
+           3099251      branches                  #  133.766 M/sec                  
+             29023      branch-misses             #    0.94% of all branches        
+
+       0.024974399 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 4 1000000
+22000000,
+ Performance counter stats for './a.out 4 1000000':
+
+         26.007778      task-clock (msec)         #    0.930 CPUs utilized          
+                 4      context-switches          #    0.154 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                38      page-faults               #    0.001 M/sec                  
+          17314090      cycles                    #    0.666 GHz                    
+            355282      stalled-cycles-frontend   #    2.05% frontend cycles idle   
+           1599367      stalled-cycles-backend    #    9.24% backend  cycles idle   
+          31082584      instructions              #    1.80  insns per cycle        
+                                                  #    0.05  stalled cycles per insn
+           4097930      branches                  #  157.566 M/sec                  
+             28107      branch-misses             #    0.69% of all branches        
+
+       0.027978700 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 5 1000000
+52000000,
+ Performance counter stats for './a.out 5 1000000':
+
+         29.915397      task-clock (msec)         #    0.937 CPUs utilized          
+                 5      context-switches          #    0.167 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.001 M/sec                  
+          19921582      cycles                    #    0.666 GHz                    
+            375083      stalled-cycles-frontend   #    1.88% frontend cycles idle   
+           1682813      stalled-cycles-backend    #    8.45% backend  cycles idle   
+          36116683      instructions              #    1.81  insns per cycle        
+                                                  #    0.05  stalled cycles per insn
+           5100178      branches                  #  170.487 M/sec                  
+             28987      branch-misses             #    0.57% of all branches        
+
+       0.031922997 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 6 1000000
+114000000,
+ Performance counter stats for './a.out 6 1000000':
+
+         83.129041      task-clock (msec)         #    0.976 CPUs utilized          
+                 9      context-switches          #    0.108 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                36      page-faults               #    0.433 K/sec                  
+          55374754      cycles                    #    0.666 GHz                    
+            349820      stalled-cycles-frontend   #    0.63% frontend cycles idle   
+          28625088      stalled-cycles-backend    #   51.69% backend  cycles idle   
+          55131344      instructions              #    1.00  insns per cycle        
+                                                  #    0.52  stalled cycles per insn
+           6102351      branches                  #   73.408 M/sec                  
+           3029466      branch-misses             #   49.64% of all branches        
+
+       0.085189427 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 7 1000000
+240000000,
+ Performance counter stats for './a.out 7 1000000':
+
+         37.435718      task-clock (msec)         #    0.951 CPUs utilized          
+                 6      context-switches          #    0.160 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.001 M/sec                  
+          24923980      cycles                    #    0.666 GHz                    
+            383950      stalled-cycles-frontend   #    1.54% frontend cycles idle   
+           1683293      stalled-cycles-backend    #    6.75% backend  cycles idle   
+          46120168      instructions              #    1.85  insns per cycle        
+                                                  #    0.04  stalled cycles per insn
+           7101135      branches                  #  189.689 M/sec                  
+             29324      branch-misses             #    0.41% of all branches        
+
+       0.039369238 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 8 1000000
+494000000,
+ Performance counter stats for './a.out 8 1000000':
+
+         41.159015      task-clock (msec)         #    0.946 CPUs utilized          
+                 8      context-switches          #    0.194 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                38      page-faults               #    0.923 K/sec                  
+          27402550      cycles                    #    0.666 GHz                    
+            358618      stalled-cycles-frontend   #    1.31% frontend cycles idle   
+           1654715      stalled-cycles-backend    #    6.04% backend  cycles idle   
+          51131242      instructions              #    1.87  insns per cycle        
+                                                  #    0.03  stalled cycles per insn
+           8102311      branches                  #  196.854 M/sec                  
+             29608      branch-misses             #    0.37% of all branches        
+
+       0.043497847 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 9 1000000
+1004000000,
+ Performance counter stats for './a.out 9 1000000':
+
+         44.808584      task-clock (msec)         #    0.955 CPUs utilized          
+                 7      context-switches          #    0.156 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                37      page-faults               #    0.826 K/sec                  
+          29860374      cycles                    #    0.666 GHz                    
+            369270      stalled-cycles-frontend   #    1.24% frontend cycles idle   
+           1638765      stalled-cycles-backend    #    5.49% backend  cycles idle   
+          56091323      instructions              #    1.88  insns per cycle        
+                                                  #    0.03  stalled cycles per insn
+           9098533      branches                  #  203.053 M/sec                  
+             28515      branch-misses             #    0.31% of all branches        
+
+       0.046926067 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 10 1000000
+2026000000,
+ Performance counter stats for './a.out 10 1000000':
+
+         48.642472      task-clock (msec)         #    0.956 CPUs utilized          
+                 5      context-switches          #    0.103 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.802 K/sec                  
+          32400284      cycles                    #    0.666 GHz                    
+            356049      stalled-cycles-frontend   #    1.10% frontend cycles idle   
+           1655718      stalled-cycles-backend    #    5.11% backend  cycles idle   
+          61124860      instructions              #    1.89  insns per cycle        
+                                                  #    0.03  stalled cycles per insn
+          10101441      branches                  #  207.667 M/sec                  
+             29631      branch-misses             #    0.29% of all branches        
+
+       0.050888795 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 11 1000000
+-222967296,
+ Performance counter stats for './a.out 11 1000000':
+
+         71.535218      task-clock (msec)         #    0.966 CPUs utilized          
+                19      context-switches          #    0.266 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.545 K/sec                  
+          47562299      cycles                    #    0.665 GHz                    
+            404305      stalled-cycles-frontend   #    0.85% frontend cycles idle   
+          11494460      stalled-cycles-backend    #   24.17% backend  cycles idle   
+          72742911      instructions              #    1.53  insns per cycle        
+                                                  #    0.16  stalled cycles per insn
+          11109274      branches                  #  155.298 M/sec                  
+           1123226      branch-misses             #   10.11% of all branches        
+
+       0.074020066 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 12 1000000
+-423934592,
+ Performance counter stats for './a.out 12 1000000':
+
+         75.829909      task-clock (msec)         #    0.973 CPUs utilized          
+                 7      context-switches          #    0.092 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                38      page-faults               #    0.501 K/sec                  
+          50518234      cycles                    #    0.666 GHz                    
+            362301      stalled-cycles-frontend   #    0.72% frontend cycles idle   
+          12185538      stalled-cycles-backend    #   24.12% backend  cycles idle   
+          77288790      instructions              #    1.53  insns per cycle        
+                                                  #    0.16  stalled cycles per insn
+          12105007      branches                  #  159.634 M/sec                  
+           1218471      branch-misses             #   10.07% of all branches        
+
+       0.077945930 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 13 1000000
+-823869184,
+ Performance counter stats for './a.out 13 1000000':
+
+         79.258286      task-clock (msec)         #    0.972 CPUs utilized          
+                13      context-switches          #    0.164 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.492 K/sec                  
+          52777288      cycles                    #    0.666 GHz                    
+            394135      stalled-cycles-frontend   #    0.75% frontend cycles idle   
+          11655962      stalled-cycles-backend    #   22.09% backend  cycles idle   
+          82854126      instructions              #    1.57  insns per cycle        
+                                                  #    0.14  stalled cycles per insn
+          13107350      branches                  #  165.375 M/sec                  
+           1143162      branch-misses             #    8.72% of all branches        
+
+       0.081503169 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 14 1000000
+-1621738368,
+ Performance counter stats for './a.out 14 1000000':
+
+         63.646252      task-clock (msec)         #    0.968 CPUs utilized          
+                 7      context-switches          #    0.110 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                37      page-faults               #    0.581 K/sec                  
+          42388068      cycles                    #    0.666 GHz                    
+            350377      stalled-cycles-frontend   #    0.83% frontend cycles idle   
+           1640841      stalled-cycles-backend    #    3.87% backend  cycles idle   
+          81128382      instructions              #    1.91  insns per cycle        
+                                                  #    0.02  stalled cycles per insn
+          14101729      branches                  #  221.564 M/sec                  
+             29596      branch-misses             #    0.21% of all branches        
+
+       0.065744415 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 15 1000000
+1079490560,
+ Performance counter stats for './a.out 15 1000000':
+
+         67.480140      task-clock (msec)         #    0.970 CPUs utilized          
+                 8      context-switches          #    0.119 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                38      page-faults               #    0.563 K/sec                  
+          44941051      cycles                    #    0.666 GHz                    
+            378368      stalled-cycles-frontend   #    0.84% frontend cycles idle   
+           1687954      stalled-cycles-backend    #    3.76% backend  cycles idle   
+          86137461      instructions              #    1.92  insns per cycle        
+                                                  #    0.02  stalled cycles per insn
+          15102871      branches                  #  223.812 M/sec                  
+             30380      branch-misses             #    0.20% of all branches        
+
+       0.069578124 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 16 1000000
+-2105986176,
+ Performance counter stats for './a.out 16 1000000':
+
+         71.258733      task-clock (msec)         #    0.973 CPUs utilized          
+                 8      context-switches          #    0.112 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                38      page-faults               #    0.533 K/sec                  
+          47425181      cycles                    #    0.666 GHz                    
+            360467      stalled-cycles-frontend   #    0.76% frontend cycles idle   
+           1664348      stalled-cycles-backend    #    3.51% backend  cycles idle   
+          91149705      instructions              #    1.92  insns per cycle        
+                                                  #    0.02  stalled cycles per insn
+          16103966      branches                  #  225.993 M/sec                  
+             30835      branch-misses             #    0.19% of all branches        
+
+       0.073245951 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 17 1000000
+114994944,
+ Performance counter stats for './a.out 17 1000000':
+
+         90.483476      task-clock (msec)         #    0.972 CPUs utilized          
+                21      context-switches          #    0.232 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                37      page-faults               #    0.409 K/sec                  
+          60190596      cycles                    #    0.665 GHz                    
+            428474      stalled-cycles-frontend   #    0.71% frontend cycles idle   
+           9332273      stalled-cycles-backend    #   15.50% backend  cycles idle   
+         101366806      instructions              #    1.68  insns per cycle        
+                                                  #    0.09  stalled cycles per insn
+          17110082      branches                  #  189.096 M/sec                  
+           1083809      branch-misses             #    6.33% of all branches        
+
+       0.093096451 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 18 1000000
+263989888,
+ Performance counter stats for './a.out 18 1000000':
+
+        117.947391      task-clock (msec)         #    0.981 CPUs utilized          
+                17      context-switches          #    0.144 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                38      page-faults               #    0.322 K/sec                  
+          78539297      cycles                    #    0.666 GHz                    
+            389363      stalled-cycles-frontend   #    0.50% frontend cycles idle   
+          22243976      stalled-cycles-backend    #   28.32% backend  cycles idle   
+         113199802      instructions              #    1.44  insns per cycle        
+                                                  #    0.20  stalled cycles per insn
+          18108184      branches                  #  153.528 M/sec                  
+           2533164      branch-misses             #   13.99% of all branches        
+
+       0.120245743 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 19 1000000
+563979776,
+ Performance counter stats for './a.out 19 1000000':
+
+        130.131057      task-clock (msec)         #    0.979 CPUs utilized          
+                25      context-switches          #    0.192 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                36      page-faults               #    0.277 K/sec                  
+          86666251      cycles                    #    0.666 GHz                    
+            416704      stalled-cycles-frontend   #    0.48% frontend cycles idle   
+          25830975      stalled-cycles-backend    #   29.81% backend  cycles idle   
+         122253991      instructions              #    1.41  insns per cycle        
+                                                  #    0.21  stalled cycles per insn
+          19112884      branches                  #  146.874 M/sec                  
+           3034590      branch-misses             #   15.88% of all branches        
+
+       0.132908040 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 20 1000000
+1165959552,
+ Performance counter stats for './a.out 20 1000000':
+
+        134.517907      task-clock (msec)         #    0.983 CPUs utilized          
+                16      context-switches          #    0.119 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                37      page-faults               #    0.275 K/sec                  
+          89588313      cycles                    #    0.666 GHz                    
+            388024      stalled-cycles-frontend   #    0.43% frontend cycles idle   
+          25769410      stalled-cycles-backend    #   28.76% backend  cycles idle   
+         128230664      instructions              #    1.43  insns per cycle        
+                                                  #    0.20  stalled cycles per insn
+          20110615      branches                  #  149.501 M/sec                  
+           3033544      branch-misses             #   15.08% of all branches        
+
+       0.136889199 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 40 1000000
+-82000000,
+ Performance counter stats for './a.out 40 1000000':
+
+        178.331157      task-clock (msec)         #    0.986 CPUs utilized          
+                23      context-switches          #    0.129 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                38      page-faults               #    0.213 K/sec                  
+         118760062      cycles                    #    0.666 GHz                    
+            427812      stalled-cycles-frontend   #    0.36% frontend cycles idle   
+           9896421      stalled-cycles-backend    #    8.33% backend  cycles idle   
+         217297483      instructions              #    1.83  insns per cycle        
+                                                  #    0.05  stalled cycles per insn
+          40116537      branches                  #  224.955 M/sec                  
+           1037078      branch-misses             #    2.59% of all branches        
+
+       0.180792534 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 80 1000000
+-162000000,
+ Performance counter stats for './a.out 80 1000000':
+
+        329.198386      task-clock (msec)         #    0.990 CPUs utilized          
+                45      context-switches          #    0.137 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                38      page-faults               #    0.115 K/sec                  
+         219228800      cycles                    #    0.666 GHz                    
+            498844      stalled-cycles-frontend   #    0.23% frontend cycles idle   
+          10197360      stalled-cycles-backend    #    4.65% backend  cycles idle   
+         417540590      instructions              #    1.90  insns per cycle        
+                                                  #    0.02  stalled cycles per insn
+          80138929      branches                  #  243.437 M/sec                  
+           1046588      branch-misses             #    1.31% of all branches        
+
+       0.332445198 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 160 1000000
+-322000000,
+ Performance counter stats for './a.out 160 1000000':
+
+        630.287727      task-clock (msec)         #    0.995 CPUs utilized          
+                65      context-switches          #    0.103 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                38      page-faults               #    0.060 K/sec                  
+         419870412      cycles                    #    0.666 GHz                    
+            612603      stalled-cycles-frontend   #    0.15% frontend cycles idle   
+          10609581      stalled-cycles-backend    #    2.53% backend  cycles idle   
+         817873313      instructions              #    1.95  insns per cycle        
+                                                  #    0.01  stalled cycles per insn
+         160168565      branches                  #  254.120 M/sec                  
+           1058837      branch-misses             #    0.66% of all branches        
+
+       0.633557200 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 320 1000000
+-642000000,
+ Performance counter stats for './a.out 320 1000000':
+
+       1233.424886      task-clock (msec)         #    0.995 CPUs utilized          
+               146      context-switches          #    0.118 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                37      page-faults               #    0.030 K/sec                  
+         821599396      cycles                    #    0.666 GHz                    
+            912786      stalled-cycles-frontend   #    0.11% frontend cycles idle   
+          11745009      stalled-cycles-backend    #    1.43% backend  cycles idle   
+        1618735505      instructions              #    1.97  insns per cycle        
+                                                  #    0.01  stalled cycles per insn
+         320245796      branches                  #  259.639 M/sec                  
+           1095500      branch-misses             #    0.34% of all branches        
+
+       1.239504326 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 640 1000000
+-1282000000,
+ Performance counter stats for './a.out 640 1000000':
+
+       2439.090927      task-clock (msec)         #    0.996 CPUs utilized          
+               277      context-switches          #    0.114 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.016 K/sec                  
+        1624756452      cycles                    #    0.666 GHz                    
+           1458978      stalled-cycles-frontend   #    0.09% frontend cycles idle   
+          13794538      stalled-cycles-backend    #    0.85% backend  cycles idle   
+        3220336843      instructions              #    1.98  insns per cycle        
+                                                  #    0.00  stalled cycles per insn
+         640388923      branches                  #  262.552 M/sec                  
+           1160666      branch-misses             #    0.18% of all branches        
+
+       2.448486434 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ perf stat ./a.out 1280 1000000
+1732967296,
+ Performance counter stats for './a.out 1280 1000000':
+
+       4849.870064      task-clock (msec)         #    0.996 CPUs utilized          
+               542      context-switches          #    0.112 K/sec                  
+                 0      cpu-migrations            #    0.000 K/sec                  
+                39      page-faults               #    0.008 K/sec                  
+        3231342783      cycles                    #    0.666 GHz                    
+           2503262      stalled-cycles-frontend   #    0.08% frontend cycles idle   
+          18060664      stalled-cycles-backend    #    0.56% backend  cycles idle   
+        6423682226      instructions              #    1.99  insns per cycle        
+                                                  #    0.00  stalled cycles per insn
+        1280689705      branches                  #  264.067 M/sec                  
+           1292304      branch-misses             #    0.10% of all branches        
+
+       4.867556528 seconds time elapsed
+
+parallella@parallella:~/performance_test/simple_roop$ 
+
